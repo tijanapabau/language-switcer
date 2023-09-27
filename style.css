@@ -26,8 +26,14 @@ body {
 }
 /* bottom: -400px; */
 
+.language-content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 .change-language-toggle {
-    height: 320px;
+    height: 400px;
     background-color: #54B2D3;
     padding: 50px 100px;
     position: fixed;
@@ -36,13 +42,22 @@ body {
     width: 100vw;
 }
 
+.region-image-heading{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
 .language-heading{
     color: #fff;
+    font-weight: bold;
+    font-size: 64px;
+    margin: 0;
 }
 
 .language-description{
-    padding-top: 20px;
     color: #fff;
+    font-size: 24px;
 }
 
 .items-languages {
@@ -50,7 +65,6 @@ body {
     flex-wrap: wrap;
     column-gap: 30px;
     row-gap: 30px;
-    padding-top: 40px;
 }
 
 .items-languages a {
