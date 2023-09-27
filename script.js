@@ -37,9 +37,27 @@ $(".language-overlay").on('click', () => {
     // });
 })
 
-console.log(location.pathname.split("/"));
 
-console.log(newSlug("fr")); 
-function newSlug(item) { 
-    return "/" + item + location.pathname; 
-}
+// $(".us-language").on('click', () => {
+//     console.log(location.pathname.split("/"));
+//     console.log(newSlug("en-us")); 
+//     function newSlug(item) { 
+//         return "/" + item + location.pathname; 
+//     }
+// });
+
+// $(".us-language").on('click', (event) => {
+//     event.preventDefault(); // Prevent the default behavior of the link
+//     const currentPath = location.pathname;
+//     const newSlug = "/en-us" + currentPath;
+//     window.location.href = "https://pabau.com" + newSlug;
+// });
+
+$(".us-language").on('click', (event) => {
+    event.preventDefault(); // Prevent the default behavior of the link
+    const pathSegments = location.pathname.split('/');
+    pathSegments.shift(); // Remove the first segment (usually "pabau.com")
+    const newPath = "/en-us" + pathSegments.join('/');
+    window.location.href = "https://pabau.com" + newPath;
+});
+
