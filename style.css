@@ -76,9 +76,21 @@ body {
 }
 
 .close-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
     position: absolute;
     right: 300px;
     top: 20px;
     cursor: pointer;
     color: #fff;
+}
+
+.close-btn div{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.close-btn div:hover{
+    text-decoration: underline;
 }
